@@ -1,4 +1,5 @@
 %{
+  "brcpfcnpj": {:hex, :brcpfcnpj, "0.1.0", "ab8051d7c3e30dcc049728e2039c77bbb93ee715bf1c622c74c50bea9c3295b0", [:mix], [], "hexpm"},
   "exchema": {:hex, :exchema, "0.3.0", "ca61128b1c84786c2259f20b2e2d7da5c99cdfe7b6adf91abedf28e2734b4026", [:mix], [], "hexpm"},
   "exchema_coercion": {:git, "https://github.com/bamorim/exchema_coercion.git", "82dfdada87b0aa66fd9cccee6d7439c26d90c189", []},
   "exchema_stream_data": {:git, "https://github.com/bamorim/exchema_stream_data.git", "2fa591b86f8dd87f3e8ab0a233f356dc5bf5a0a4", []},

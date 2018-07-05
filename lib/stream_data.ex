@@ -1,13 +1,17 @@
 if Code.ensure_loaded?(StreamData) do
   defmodule ExchemaExtra.StreamData do
-    @overrides []
+    alias ExchemaExtra.StreamData, as: SD
+
+    @overrides [SD.CPF, SD.CNPJ]
 
     if Code.ensure_loaded?(UUID) do
-      @overrides [ExchemaExtra.StreamData.UUID | @overrides]
+      @overrides [SD.UUID | @overrides]
     end
 
-    def override(original, type) do
-      Enum.reduce(@overrides, original, &(&1.override(&2, type)))
+    def override(type, original) do
+      Enum.reduce(@overrides, original, fn mod, gen ->
+        mod.override(type, gen)
+      end)
     end
   end
 end
