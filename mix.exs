@@ -21,7 +21,7 @@ defmodule ExchemaExtra.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:exchema, "~> 0.3.0"},
+      {:exchema, "~> 0.4.0"},
       {:uuid, "~> 1.1", optional: true},
       {:exchema_coercion, github: "bamorim/exchema_coercion", optional: true},
       {:exchema_stream_data, github: "bamorim/exchema_stream_data", optional: true},
