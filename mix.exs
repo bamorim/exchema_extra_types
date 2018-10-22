@@ -22,7 +22,7 @@ defmodule ExchemaExtra.MixProject do
   defp deps do
     [
       {:exchema, "~> 0.4.0"},
-      {:uuid, "~> 1.1", optional: true},
+      {:elixir_uuid, "~> 1.2.0", optional: true},
       {:exchema_coercion, github: "bamorim/exchema_coercion", optional: true},
       {:exchema_stream_data, github: "bamorim/exchema_stream_data", optional: true},
       {:brcpfcnpj, "~> 0.1.0"}
