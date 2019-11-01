@@ -25,6 +25,7 @@ defmodule ExchemaExtra.MixProject do
       {:elixir_uuid, "~> 1.2.0", optional: true},
       {:exchema_coercion, github: "bamorim/exchema_coercion", optional: true},
       {:exchema_stream_data, github: "bamorim/exchema_stream_data", optional: true},
+      {:dialyxir, "1.0.0-rc.7"},
       {:brcpfcnpj, "~> 0.1.0"}
     ]
   end

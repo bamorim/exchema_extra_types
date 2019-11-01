@@ -46,7 +46,10 @@ if Code.ensure_loaded?(UUID) do
         true
     """
 
+    @type t :: String.t()
+
     def __type__({}), do: __type__({:any, :any})
+
     def __type__({version, format}) do
       {:ref, Exchema.Types.String, [{{__MODULE__, :predicate}, {version, format}}]}
     end
@@ -57,12 +60,14 @@ if Code.ensure_loaded?(UUID) do
            :ok <- check_format(format, info[:type]),
            do: :ok
     end
+
     def predicate(_, _), do: :ok
 
     def check_info(input) do
       case UUID.info(input) do
         {:ok, info} ->
           {:ok, info}
+
         _ ->
           {:error, :not_an_uuid}
       end
@@ -75,8 +80,8 @@ if Code.ensure_loaded?(UUID) do
       do: check_equal_or_any(format, actual_format, :invalid_format)
 
     defp check_equal_or_any(value, actual_value, error)
-      when value != :any and actual_value != value,
-      do: {:error, error}
+         when value != :any and actual_value != value,
+         do: {:error, error}
 
     defp check_equal_or_any(_, _, _), do: :ok
   end
