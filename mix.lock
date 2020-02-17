@@ -1,8 +1,11 @@
 %{
   "brcpfcnpj": {:hex, :brcpfcnpj, "0.1.0", "ab8051d7c3e30dcc049728e2039c77bbb93ee715bf1c622c74c50bea9c3295b0", [:mix], [], "hexpm"},
-  "exchema": {:hex, :exchema, "0.3.0", "ca61128b1c84786c2259f20b2e2d7da5c99cdfe7b6adf91abedf28e2734b4026", [:mix], [], "hexpm"},
-  "exchema_coercion": {:git, "https://github.com/bamorim/exchema_coercion.git", "82dfdada87b0aa66fd9cccee6d7439c26d90c189", []},
-  "exchema_stream_data": {:git, "https://github.com/bamorim/exchema_stream_data.git", "2fa591b86f8dd87f3e8ab0a233f356dc5bf5a0a4", []},
+  "dialyxir": {:hex, :dialyxir, "1.0.0-rc.7", "6287f8f2cb45df8584317a4be1075b8c9b8a69de8eeb82b4d9e6c761cf2664cd", [:mix], [{:erlex, ">= 0.2.5", [hex: :erlex, repo: "hexpm", optional: false]}], "hexpm"},
+  "elixir_uuid": {:hex, :elixir_uuid, "1.2.1", "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm"},
+  "erlex": {:hex, :erlex, "0.2.5", "e51132f2f472e13d606d808f0574508eeea2030d487fc002b46ad97e738b0510", [:mix], [], "hexpm"},
+  "exchema": {:hex, :exchema, "0.4.0", "a978535ad9a40201c2ac3c10e73a4cf7cebceb666ec1b8ea1f179b7b9dcc059e", [:mix], [], "hexpm"},
+  "exchema_coercion": {:git, "https://github.com/bamorim/exchema_coercion.git", "c7c967800aaa93ef417c73bc7aa4645ac0969c3c", []},
+  "exchema_stream_data": {:git, "https://github.com/bamorim/exchema_stream_data.git", "e662a01fae5890e6ef3d7009eb9b03693c877527", []},
   "stream_data": {:hex, :stream_data, "0.4.2", "fa86b78c88ec4eaa482c0891350fcc23f19a79059a687760ddcf8680aac2799b", [:mix], [], "hexpm"},
   "uuid": {:hex, :uuid, "1.1.8", "e22fc04499de0de3ed1116b770c7737779f226ceefa0badb3592e64d5cfb4eb9", [:mix], [], "hexpm"},
 }

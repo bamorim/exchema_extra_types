@@ -21,14 +21,18 @@ if Code.ensure_loaded?(StreamData) and Code.ensure_loaded?(UUID) do
       case version do
         1 ->
           map(fmt_gen(format), &UUID.uuid1(&1))
+
         3 ->
-          map(fmt_gen(format), &UUID.uuid3(UUID.uuid1, UUID.uuid1, &1))
+          map(fmt_gen(format), &UUID.uuid3(UUID.uuid1(), UUID.uuid1(), &1))
+
         4 ->
           map(fmt_gen(format), &UUID.uuid4(&1))
+
         5 ->
-          map(fmt_gen(format), &UUID.uuid5(UUID.uuid1, UUID.uuid1, &1))
+          map(fmt_gen(format), &UUID.uuid5(UUID.uuid1(), UUID.uuid1(), &1))
+
         :any ->
-          [1,3,4,5] |> Enum.map(&generator(&1, format)) |> one_of()
+          [1, 3, 4, 5] |> Enum.map(&generator(&1, format)) |> one_of()
       end
     end
 
